@@ -1,0 +1,13 @@
+.input {
+  width: 100%;
+  resize: none;
+  outline: none;
+  height: 100px;
+}
+
+.button {
+  background-color: var(--orange);
+  color: var(--white);
+  padding: 20px 40px;
+  float: right;
+}

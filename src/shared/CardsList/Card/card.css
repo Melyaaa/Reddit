@@ -1,0 +1,26 @@
+.card {
+  background-color: var(--white);
+  border-radius: 7px;
+  display: flex;
+  flex-flow: row wrap;
+  position: relative;
+}
+
+.card > * {
+  flex: 1 1 100%;
+}
+
+.card:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+@media all and (min-width: 1024px) {
+  .card {
+    flex-flow: row nowrap;
+    padding: 40px;
+  }
+
+  .card > * {
+    flex: unset;
+  }
+}
