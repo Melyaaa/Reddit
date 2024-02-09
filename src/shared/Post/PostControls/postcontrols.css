@@ -1,0 +1,18 @@
+.postControls {
+    display: flex;
+    margin-bottom: 37px;
+}
+
+.postControlButton {
+    display: flex;
+    align-items: center;
+    margin-right: 29px;
+}
+
+.postButtonDescr {
+    line-height: 16px;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--grey99);
+    padding-left: 5px;
+}

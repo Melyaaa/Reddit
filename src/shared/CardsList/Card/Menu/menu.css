@@ -24,8 +24,6 @@
 
 .dropdown {
   position: absolute;
-  right: 0;
-  top: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
   border-radius: 3px;
   background-color: var(--white);
@@ -45,11 +43,5 @@
     top: 42%;
     right: 105px;
     transform: rotate(90deg);
-  }
-
-  .dropdown {
-    transform: rotate(-90deg);
-    right: -220px;
-    top: -168px;
   }
 }

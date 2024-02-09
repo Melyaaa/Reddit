@@ -12,6 +12,7 @@
     --greyC4: #C4C4C4;
     --grey99: #999999;
     --grey66: #666666;
+    --greyE5: #E5E5E5;
 }
 
 body {
@@ -44,4 +45,5 @@ button {
     padding: 0;
     border: 0;
     background: transparent;
+    cursor: pointer;
 }

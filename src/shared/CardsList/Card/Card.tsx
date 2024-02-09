@@ -12,6 +12,10 @@ interface IPost {
   previewPhoto: string;
   subreddit_name_prefixed: string;
   title: string;
+  selftext: string;
+  score: number
+  id: string;
+  subreddit: string;
   sr_detail: Isr_detail;
 }
 
@@ -31,13 +35,14 @@ interface ICardProps {
 export function Card({ post }: ICardProps) {
   return (
     <li className={styles.card}>
-      <Content avatar={post.data.sr_detail.header_img} text={post.data.title} username={post.data.subreddit_name_prefixed} />
+      <Content post={post} />
 
       <Preview previewPhoto={post.data.sr_detail.banner_img} />
 
       <Menu />
 
-      <Controls />
+      <Controls score={post.data.score}/>
     </li>
   );
 }
+

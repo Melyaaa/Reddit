@@ -3,11 +3,14 @@
   resize: none;
   outline: none;
   height: 100px;
+  border: 1px solid var(--greyD9);
+  margin-bottom: -4px;
 }
 
-.button {
-  background-color: var(--orange);
-  color: var(--white);
-  padding: 20px 40px;
-  float: right;
+.input[aria-invalid] {
+  border-color: red;
+}
+
+.form {
+  margin-bottom: 35px;
 }

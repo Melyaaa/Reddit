@@ -1,0 +1,12 @@
+.input {
+  width: 100%;
+  resize: none;
+  outline: none;
+  height: 50px;
+  border: 1px solid var(--greyD9);
+  margin-bottom: -4px;
+}
+
+.form {
+  margin-bottom: 35px;
+}

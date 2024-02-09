@@ -1,0 +1,30 @@
+.commentControls {
+    display: flex;
+}
+
+.controlsList {
+    display: flex;
+    align-items: center;
+}
+
+.controlsBlock {
+    flex: 1 1 auto;
+    background-color: var(--greyE5);
+    display: flex;
+    padding: 0px 17px;
+}
+
+.controlItem {
+    margin-right: 26px;
+}
+
+.button {
+  background-color: var(--orange);
+  color: var(--white);
+  padding: 20px 40px;
+}
+
+.button:disabled { 
+    opacity: 0.5;
+    cursor: default;
+}

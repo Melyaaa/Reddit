@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './userdata.css';
 
 interface IUserDataProps {
-  avatar: string
+  avatar?: string
   username: string
 }
 

@@ -21,7 +21,7 @@
 
 @media all and (min-width: 1024px) {
   .textContent {
-    padding: 15px 38px;
+    padding: 15px 0px;
     margin-bottom: 0;
     margin-right: auto;
     display: flex;
