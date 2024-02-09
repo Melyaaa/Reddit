@@ -11,7 +11,7 @@ export function CardsList() {
   const [loading, setLoading] = React.useState(false);
   const [errorLoading, setErrorLoading] = React.useState('');
   const bottomOfList = useRef<HTMLDivElement>(null);
-  const [after, setAfter] = React.useState('');
+  const [nextAfter, setNextAfter] = React.useState('');
 
   // React.useEffect(() => {
   //   async function load() {
@@ -49,12 +49,13 @@ export function CardsList() {
         const { data: { data: { after, children } } } = await axios.get('https://oauth.reddit.com/best.json?sr_detail=true', {
           headers: { 'Authorization': `Bearer ${token}` },
           params: {
-            limit: 10
+            limit: 10, 
+            after: nextAfter
           }
         })
 
-        setAfter(after)
-        setPosts(prevChildren => children)
+        setNextAfter(after)
+        setPosts(prevChildren => prevChildren.concat(...children))
       } catch (error) {
         setErrorLoading(String(error));
       }
@@ -62,8 +63,10 @@ export function CardsList() {
       setLoading(false);
     }
 
-    const observer = new IntersectionObserver(() => {
-      load()
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        load()
+      }
     }, {
       rootMargin: '10px'
     });
@@ -77,7 +80,7 @@ export function CardsList() {
         observer.unobserve(bottomOfList.current)
       }
     }
-  }, [bottomOfList.current])
+  }, [bottomOfList.current, nextAfter, token])
 
   return (
     <ul className={styles.cardsList}>
